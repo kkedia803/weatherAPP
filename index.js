@@ -16,15 +16,6 @@ let weather = () => {
         fetch(url)
             .then((resp) => resp.json())
             .then((data) => {
-                console.log(data);
-                console.log(data.name);
-                console.log(data.weather[0].icon);
-                console.log(data.weather[0].main);
-                console.log(data.weather[0].description);
-                console.log(data.main.humidity);
-                console.log(data.main.pressure);
-                console.log(data.main.temp_max);
-                console.log(data.main.temp_min);
                 result.innerHTML = `
                  <h2>${data.name}</h2>
                  <h3 class='desc'>${data.weather[0].description}</h3>
